@@ -43,6 +43,6 @@ Clean Architecture and MVVM
  ## General Terms
    1. CoroutineScope has to be implemented in classes that are going to switch threads. With it comes CoroutineContext which we have to override.
    2. MutableLiveData type is, as the name says, a mutable LiveData (we can set values).
-   3. ingleLiveEvent type is, in short, a LiveData that triggers only ones.
+   3. SingleLiveEvent type is, in short, a LiveData that triggers only ones.
 
 
