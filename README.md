@@ -33,3 +33,16 @@ Clean Architecture and MVVM
    5. Koin for the dependencies injections
    
     implementation 'org.koin:koin-android-viewmodel:2.0.0-rc-2'
+    
+ ## Overview about Classes and Modules
+   1. Modules contains the classes that are going to be assembled inside appModule scope (in this case our Retrofit service and CatRepository).
+   2. To build Retrofit service, we will use createWebService() as singleton
+   3. Our CatRepository is built here using Koin’s get() to satisfy constructor’s parameters. Whenever we’ll need it, Koin will provide it for us when we’ll use “by inject”.
+   4. We now need to add this appModules inside our Application to have access to it inside our app.
+  
+ ## General Terms
+   1. CoroutineScope has to be implemented in classes that are going to switch threads. With it comes CoroutineContext which we have to override.
+   2. MutableLiveData type is, as the name says, a mutable LiveData (we can set values).
+   3. ingleLiveEvent type is, in short, a LiveData that triggers only ones.
+
+
